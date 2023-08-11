@@ -1,0 +1,177 @@
+
+Alumno@DESKTOP-7LDGQBD MINGW64 ~/Desktop/prueba2
+$ git add .
+fatal: not a git repository (or any of the parent directories): .git
+
+Alumno@DESKTOP-7LDGQBD MINGW64 ~/Desktop/prueba2
+$ git init
+Initialized empty Git repository in C:/Users/Alumno/Desktop/prueba2/.git/
+
+Alumno@DESKTOP-7LDGQBD MINGW64 ~/Desktop/prueba2 (master)
+$ git add .
+
+Alumno@DESKTOP-7LDGQBD MINGW64 ~/Desktop/prueba2 (master)
+$ git commit -m "mi trabajo2"
+[master (root-commit) 3772d71] mi trabajo2
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 "Procesos de creaci\303\263n de un repositorio.docx"
+ create mode 100644 prueba 2.txt
+
+Alumno@DESKTOP-7LDGQBD MINGW64 ~/Desktop/prueba2 (master)
+$ git branch -M main
+
+Alumno@DESKTOP-7LDGQBD MINGW64 ~/Desktop/prueba2 (main)
+$ git remote add origin https://github.com/EdwardJhosep/prueba2.git
+
+Alumno@DESKTOP-7LDGQBD MINGW64 ~/Desktop/prueba2 (main)
+$ git push -u origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 116.79 KiB | 29.20 MiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/EdwardJhosep/prueba2.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+Alumno@DESKTOP-7LDGQBD MINGW64 ~/Desktop/prueba2 (main)
+$ git branch rama-1
+
+Alumno@DESKTOP-7LDGQBD MINGW64 ~/Desktop/prueba2 (main)
+$ git checkout rama-1^C
+
+Alumno@DESKTOP-7LDGQBD MINGW64 ~/Desktop/prueba2 (main)
+$ $ git checkout rama-1
+Switched to branch 'rama-1'
+bash: $: command not found
+bash: Switched: command not found
+
+Alumno@DESKTOP-7LDGQBD MINGW64 ~/Desktop/prueba2 (main)
+$  git checkout rama-1
+Switched to branch 'rama-1'
+Switched to branch 'rama-1'
+bash: Switched: command not found
+
+Alumno@DESKTOP-7LDGQBD MINGW64 ~/Desktop/prueba2 (rama-1)
+$ git branch rama-2
+
+Alumno@DESKTOP-7LDGQBD MINGW64 ~/Desktop/prueba2 (rama-1)
+$ git checkout rama-1
+Already on 'rama-1'
+
+Alumno@DESKTOP-7LDGQBD MINGW64 ~/Desktop/prueba2 (rama-1)
+$ git checkout rama-2
+Switched to branch 'rama-2'
+
+Alumno@DESKTOP-7LDGQBD MINGW64 ~/Desktop/prueba2 (rama-2)
+$ git checkout rama-2
+Already on 'rama-2'
+
+Alumno@DESKTOP-7LDGQBD MINGW64 ~/Desktop/prueba2 (rama-2)
+$  git checkout rama-1
+Switched to branch 'rama-1'
+
+Alumno@DESKTOP-7LDGQBD MINGW64 ~/Desktop/prueba2 (rama-1)
+$ git log  --graph -m"actualizacion11111"
+fatal: unrecognized argument: -mactualizacion11111
+
+Alumno@DESKTOP-7LDGQBD MINGW64 ~/Desktop/prueba2 (rama-1)
+$ git checkout rama-2
+Already on 'rama-2'
+Switched to branch 'rama-2'
+bash: Already: command not found
+
+Alumno@DESKTOP-7LDGQBD MINGW64 ~/Desktop/prueba2 (rama-2)
+$ git checkout rama-2
+Already on 'rama-2'
+
+Alumno@DESKTOP-7LDGQBD MINGW64 ~/Desktop/prueba2 (rama-2)
+$ git checkout rama 1
+error: pathspec 'rama' did not match any file(s) known to git
+error: pathspec '1' did not match any file(s) known to git
+
+Alumno@DESKTOP-7LDGQBD MINGW64 ~/Desktop/prueba2 (rama-2)
+$ git marge rama-1
+git: 'marge' is not a git command. See 'git --help'.
+
+The most similar command is
+        merge
+
+Alumno@DESKTOP-7LDGQBD MINGW64 ~/Desktop/prueba2 (rama-2)
+$ git merge rama-1
+Already up to date.
+
+Alumno@DESKTOP-7LDGQBD MINGW64 ~/Desktop/prueba2 (rama-2)
+$ git log  --graph -m"actualizacion11111"
+fatal: unrecognized argument: -mactualizacion11111
+
+Alumno@DESKTOP-7LDGQBD MINGW64 ~/Desktop/prueba2 (rama-2)
+$ git log  --graph -m"actualizacion1"
+fatal: unrecognized argument: -mactualizacion1
+
+Alumno@DESKTOP-7LDGQBD MINGW64 ~/Desktop/prueba2 (rama-2)
+$ ^C
+
+Alumno@DESKTOP-7LDGQBD MINGW64 ~/Desktop/prueba2 (rama-2)
+$ git log --graph --grep="actualizacion11111"
+
+Alumno@DESKTOP-7LDGQBD MINGW64 ~/Desktop/prueba2 (rama-2)
+$ git log --graph --m="actualizacion11111"
+fatal: unrecognized argument: --m=actualizacion11111
+
+Alumno@DESKTOP-7LDGQBD MINGW64 ~/Desktop/prueba2 (rama-2)
+$ git branch --merged
+  main
+  rama-1
+* rama-2
+
+Alumno@DESKTOP-7LDGQBD MINGW64 ~/Desktop/prueba2 (rama-2)
+$ git log --graph --oneline --all
+* 3772d71 (HEAD -> rama-2, origin/main, rama-1, main) mi trabajo2
+
+Alumno@DESKTOP-7LDGQBD MINGW64 ~/Desktop/prueba2 (rama-2)
+$ git push origin rama-2
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'rama-2' on GitHub by visiting:
+remote:      https://github.com/EdwardJhosep/prueba2/pull/new/rama-2
+remote:
+To https://github.com/EdwardJhosep/prueba2.git
+ * [new branch]      rama-2 -> rama-2
+
+Alumno@DESKTOP-7LDGQBD MINGW64 ~/Desktop/prueba2 (rama-2)
+$ ^[[200~# Crea la nueva rama
+bash: $'\E[200~#': command not found
+# Cambia a la nueva rama
+git checkout mi-nueva-rama
+
+Alumno@DESKTOP-7LDGQBD MINGW64 ~/Desktop/prueba2 (rama-2)
+$ git branch mi-nueva-rama
+
+Alumno@DESKTOP-7LDGQBD MINGW64 ~/Desktop/prueba2 (rama-2)
+$
+
+Alumno@DESKTOP-7LDGQBD MINGW64 ~/Desktop/prueba2 (rama-2)
+$ # Cambia a la nueva rama
+
+Alumno@DESKTOP-7LDGQBD MINGW64 ~/Desktop/prueba2 (rama-2)
+$ git checkout mi-nueva-rama
+Switched to branch 'mi-nueva-rama'
+
+Alumno@DESKTOP-7LDGQBD MINGW64 ~/Desktop/prueba2 (mi-nueva-rama)
+$ git push origin mi-nueva-rama
+
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'mi-nueva-rama' on GitHub by visiting:
+remote:      https://github.com/EdwardJhosep/prueba2/pull/new/mi-nueva-rama
+remote:
+To https://github.com/EdwardJhosep/prueba2.git
+ * [new branch]      mi-nueva-rama -> mi-nueva-rama
+
+Alumno@DESKTOP-7LDGQBD MINGW64 ~/Desktop/prueba2 (mi-nueva-rama)
+$ ^C
+
+Alumno@DESKTOP-7LDGQBD MINGW64 ~/Desktop/prueba2 (mi-nueva-rama)
+$
